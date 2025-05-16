@@ -2,7 +2,7 @@ apiVersion: kargo.akuity.io/v1alpha1
 kind: Stage
 metadata:
   name: dev
-  namespace: kargo-simple
+  namespace: project01
 spec:
   requestedFreight:
   - origin:
