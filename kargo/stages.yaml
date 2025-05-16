@@ -15,7 +15,7 @@ spec:
       steps:
       - uses: git-clone
         config:
-          repoURL: https://github.com/<repo>
+          repoURL: https://github.com/Cloud-Hacks/kargo-quick-temp
           checkout:
           - branch: main
             path: ./src
@@ -30,7 +30,7 @@ spec:
         config:
           path: ./src/app/base
           images:
-          - image: ghcr.io/<user>/guestbook
+          - image: ghcr.io/afzal442/guestbook
       - uses: kustomize-build
         config:
           path: ./src/app/env/dev
@@ -50,10 +50,10 @@ spec:
           apps:
           - name: guestbook-simple-dev
             sources:
-            - repoURL: https://github.com/<repo>
+            - repoURL: https://github.com/Cloud-Hacks/kargo-quick-temp
               kustomize:
                images:
-               - repoURL: ghcr.io/<user>/guestbook
+               - repoURL: ghcr.io/afzal442/guestbook
 ---
 apiVersion: kargo.akuity.io/v1alpha1
 kind: Stage
@@ -73,7 +73,7 @@ spec:
       steps:
       - uses: git-clone
         config:
-          repoURL: https://github.com/<repo>
+          repoURL: https://github.com/Cloud-Hacks/kargo-quick-temp
           checkout:
           - branch: main
             path: ./src
@@ -88,7 +88,7 @@ spec:
         config:
           path: ./src/base
           images:
-          - image: ghcr.io/<user>/guestbook
+          - image: ghcr.io/afzal442/guestbook
       - uses: kustomize-build
         config:
           path: ./src/stages/uat
@@ -108,7 +108,7 @@ spec:
           apps:
           - name: kargo-simple-uat
             sources:
-            - repoURL: https://github.com/<repo>
+            - repoURL: https://github.com/Cloud-Hacks/kargo-quick-temp
               desiredCommitFromStep: commit
 ---
 apiVersion: kargo.akuity.io/v1alpha1
@@ -129,7 +129,7 @@ spec:
       steps:
       - uses: git-clone
         config:
-          repoURL: https://github.com/<repo>
+          repoURL: https://github.com/Cloud-Hacks/kargo-quick-temp
           checkout:
           - branch: main
             path: ./src
@@ -164,5 +164,5 @@ spec:
           apps:
           - name: my-argocd-instance
             sources:
-            - repoURL: https://github.com/<repo>
+            - repoURL: https://github.com/Cloud-Hacks/kargo-quick-temp
               desiredCommitFromStep: commit
