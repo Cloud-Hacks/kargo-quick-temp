@@ -7,4 +7,4 @@ spec:
   subscriptions:
   - image:
       repoURL: ghcr.io/afzal442/guestbook
-      discoveryLimit: 5
+      tagSelectionStrategy: SemVer
