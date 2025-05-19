@@ -30,7 +30,7 @@ spec:
         config:
           path: ./src/app/base
           images:
-          - image: ghcr.io/afzal442/guestbook
+          - image: ghcr.io/afzal442/guestbook:latest
       - uses: kustomize-build
         config:
           path: ./src/app/env/dev
