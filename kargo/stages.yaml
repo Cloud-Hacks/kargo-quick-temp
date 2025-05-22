@@ -87,7 +87,7 @@ spec:
       - uses: kustomize-set-image
         as: update-image
         config:
-          path: ./src/base
+          path: ./src/app/base
           images:
           - image: ghcr.io/afzal442/guestbook
             tag: v0.0.1
@@ -144,7 +144,7 @@ spec:
       - uses: kustomize-set-image
         as: update-image
         config:
-          path: ./src/base
+          path: ./src/app/base
           images:
           - image: ghcr.io/afzal442/guestbook
             tag: v0.0.3
