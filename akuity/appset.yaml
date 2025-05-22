@@ -20,9 +20,9 @@ spec:
     metadata:
       name: 'guestbook-simple-{{env}}'
       annotations:
-        kargo.akuity.io/authorized-stage: kargo-simple:{{env}}
+        kargo.akuity.io/authorized-stage: project01:{{env}}
     spec:
-      project: default
+      project: test
       source:
         repoURL: https://github.com/Cloud-Hacks/kargo-quick-temp
         targetRevision: main
