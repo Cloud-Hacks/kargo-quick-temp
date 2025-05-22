@@ -93,7 +93,7 @@ spec:
             tag: v0.0.1
       - uses: kustomize-build
         config:
-          path: ./src/stages/uat
+          path: ./src/app/env/staging
           outPath: ./out/manifests.yaml
       - uses: git-commit
         as: commit
@@ -150,7 +150,7 @@ spec:
             tag: v0.0.3
       - uses: kustomize-build
         config:
-          path: ./src/stages/prod
+          path: ./src/app/env/prod
           outPath: ./out/manifests.yaml
       - uses: git-commit
         as: commit
