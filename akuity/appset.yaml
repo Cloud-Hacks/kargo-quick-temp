@@ -22,13 +22,13 @@ spec:
       annotations:
         kargo.akuity.io/authorized-stage: project01:{{env}}
     spec:
-      project: test
+      project: default
       source:
         repoURL: https://github.com/Cloud-Hacks/kargo-quick-temp
         targetRevision: main
         path: 'app/env/{{env}}'
       destination:
-        name: '{{name}}'
+        name: test
         namespace: 'guestbook-simple-{{env}}'
       syncPolicy:
         automated:
