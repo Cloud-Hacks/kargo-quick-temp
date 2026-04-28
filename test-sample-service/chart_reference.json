@@ -1,7 +1,0 @@
-{
-  "chart": {
-    "name": "test-ss",
-    "repository": "https://example.com/helm-charts",
-    "version": "0.1.0"
-  }
-}
